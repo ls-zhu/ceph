@@ -39,7 +39,7 @@ class StandbyPyModuleState
 public:
 
   
-  StandbyPyModuleState(PyModuleConfig &module_config_)
+  explicit StandbyPyModuleState(PyModuleConfig &module_config_)
     : module_config(module_config_)
   {}
 

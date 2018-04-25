@@ -278,7 +278,7 @@ class WatchConState {
   std::set<WatchRef> watches;
 public:
   CephContext* cct;
-  WatchConState(CephContext* cct) : lock("WatchConState"), cct(cct) {}
+  explicit WatchConState(CephContext* cct) : lock("WatchConState"), cct(cct) {}
 
   /// Add a watch
   void addWatch(

@@ -1698,7 +1698,7 @@ private:
     struct ReservationCB : public Context {
       PrimaryLogPGRef pg;
       bool canceled;
-      ReservationCB(PrimaryLogPG *pg) : pg(pg), canceled(false) {}
+      explicit ReservationCB(PrimaryLogPG *pg) : pg(pg), canceled(false) {}
       void finish(int) override {
 	pg->lock();
 	if (!canceled)
